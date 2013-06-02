@@ -1,3 +1,6 @@
+1.2.4
+- Reworking GitHub update
+
 1.2.3
 - Only for testing the update.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modification application="Heroes of Newerth" appversion="*" mmversion="1.0"
-	name="Rune and Stack Timer" version="1.2.3" date="2013-06-02"
+	name="Rune and Stack Timer" version="1.2.4" date="2013-06-02"
 	description="Warns the player a set amount of seconds before a rune will spawn and a set amount of seconds seconds before it's time to stack neutral creep camps."
 	author="Akai_Baraue, modified by MaPePeR"
 	weblink="https://github.com/MaPePeR/HoN-RuneAndStackTimer"
