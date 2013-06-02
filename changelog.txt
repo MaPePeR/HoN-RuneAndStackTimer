@@ -1,3 +1,6 @@
+1.2.3
+- Only for testing the update.
+
 1.2.2: 
 - Updating is now done with the GitHub release-Branch.
 
