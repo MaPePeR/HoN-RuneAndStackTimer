@@ -10,8 +10,8 @@
 
 	<applyafter name="xUI"/>
 
-	<copyfile name="ui/runeandstacktimer.package" source="ui/runeandstacktimer.package" />
-	<copyfile name="ui/runeandstacktimer_options.package" source="ui/runeandstacktimer_options.package" />
+	<copyfile name="/ui/runeandstacktimer/runeandstacktimer.package" source="/ui/runeandstacktimer/runeandstacktimer.package" />
+	<copyfile name="/ui/runeandstacktimer_options.package" source="/ui/runeandstacktimer/options.package" />
 
 
 	<!-- Apply the package -->
@@ -19,7 +19,7 @@
 		<find><![CDATA[</interface>]]></find>
 		<insert position="before">
 			<![CDATA[
-			<include file="runeandstacktimer.package" />
+			<include file="/ui/runeandstacktimer/runeandstacktimer.package" />
 			]]>
 		</insert>
 	</editfile>
@@ -29,7 +29,7 @@
 		<find><![CDATA[<!-- INSERT AFTER THIS -->]]></find>
 		<insert position="after">
             <![CDATA[
-            <include file="runeandstacktimer_options.package" />
+            <include file="/ui/runeandstacktimer/options.package" />
             ]]>
     	</insert>
    	</editfile>
