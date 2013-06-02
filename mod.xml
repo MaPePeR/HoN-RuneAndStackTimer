@@ -5,7 +5,7 @@
 	author="Akai_Baraue, modified by MaPePeR"
 	weblink="https://github.com/MaPePeR/HoN-RuneAndStackTimer"
 	updatecheckurl="https://raw.github.com/MaPePeR/HoN-RuneAndStackTimer/release/version.txt"
-	updatedownloadurl="https://github.com/MaPePeR/HoN-RuneAndStackTimer/archive/release.zip"
+	updatedownloadurl="https://raw.github.com/MaPePeR/HoN-RuneAndStackTimer/release/HoN-RuneAndStackTimer.honmod"
 	>
 
 	<applyafter name="xUI"/>
