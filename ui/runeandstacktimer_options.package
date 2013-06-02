@@ -1,0 +1,60 @@
+<package>
+    <instance mod_id="runeandstacktimer_options" name="mod_options" mod_name="Rune and Stack Timer" />
+
+    <instance mod_id="runeandstacktimer_options" name="mod_checkbox" 
+        cvar="runeandstacktimer_options_stack_enabled" cvartype="int" default="1" 
+        label="Enable Stack Timer"/>
+    <instance mod_id="runeandstacktimer_options" name="mod_slider"  
+        maxlabel="30" minlabel="1" label="Seconds before neutral creeps spawn" 
+        cvar = "runeandstacktimer_options_display_stack_time" cvartype="int" default = "15" 
+        button_step="1" showpercent="0" maxvalue = "30" minvalue = "1" />
+
+    <instance name="mod_dropdown"  mod_id = "runeandstacktimer_options"  label="Notification Colour" cvar ="runeandstacktimer_stack_colour" cvartype="string" default="^gYellow" maxlistheight="4" />       
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^gGreen" value="^g" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^rRed" value="^r" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^bBlue" value="^b" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^cCyan" value="^c" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^yYellow" value="^y" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^oOrange" value="^o" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^pPurple" value="^p" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^tTeal" value="^t" />
+    <instance  name="mod_empty"  mod_id = "runeandstacktimer_options"  />
+    <instance  name="mod_line"  mod_id = "runeandstacktimer_options"  />
+
+    <instance mod_id="runeandstacktimer_options" name="mod_checkbox" 
+        cvar="runeandstacktimer_options_rune_enabled" cvartype="int" default="1" 
+        label="Enable Rune Timer"/>
+    <instance mod_id="runeandstacktimer_options" name="mod_slider"  
+        maxlabel="30" minlabel="1" label="Seconds before rune spawns" 
+        cvar = "runeandstacktimer_options_display_rune_time" cvartype="int" default = "15" 
+        button_step="1" showpercent="0" maxvalue = "30" minvalue = "1" />
+
+    <instance name="mod_dropdown"  mod_id = "runeandstacktimer_options"  label="Notification Colour" cvar ="runeandstacktimer_rune_colour" cvartype="string" default="Blue" maxlistheight="4" />        
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Green" value="^g" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Red" value="^r" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Blue" value="^b" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Cyan" value="^c" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Yellow" value="^y" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Orange" value="^o" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Purple" value="^p" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Teal" value="^t" />
+    <instance  name="mod_empty"  mod_id = "runeandstacktimer_options"  />
+    <instance  name="mod_line"  mod_id = "runeandstacktimer_options"  />
+
+    <instance mod_id="runeandstacktimer_options" name="mod_checkbox" 
+        cvar="runeandstacktimer_options_sound_enabled" cvartype="int" default="1" 
+        label="Enable Sound"/>
+    <instance name="mod_dropdown"  mod_id = "runeandstacktimer_options"  label="Sound" cvar ="runeandstacktimer_sound_id" cvartype="string" default="Login Fail" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Login" value="/shared/sounds/ui/login.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Login Fail" value="/shared/sounds/ui/login_fail.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Dadadapdadap" value="/shared/sounds/ui/quit.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Ability Error" value="/shared/sounds/ui/ability_error.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Player Kicked" value="/shared/sounds/ui/lobby/player_kicked.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Button Clock" value="/shared/sounds/ui/hero_select/button_clock.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Tutorial Popup" value="/shared/sounds/ui/tutorial/popup.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Tutorial Objective Complete" value="/shared/sounds/ui/tutorial/objective_complete.wav" />
+    <instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Tutorial Objective Failed" value="/shared/sounds/ui/tutorial/objective_fail.wav" />
+
+    <instance  name="mod_button"  mod_id = "runeandstacktimer_options"  label = "Test Sound" cmd="PlaySound(runeandstacktimer_sound_id)" align="right" option_width="20%"/>
+    <instance  name="mod_empty"  mod_id = "runeandstacktimer_options"  />
+</package>
