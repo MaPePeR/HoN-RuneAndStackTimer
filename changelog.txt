@@ -1,5 +1,8 @@
+1.2.5
+- Finally a working update.
+
 1.2.4
-- Reworking GitHub update
+- Reworking GitHub update.
 
 1.2.3
 - Only for testing the update.
