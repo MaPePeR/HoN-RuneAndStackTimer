@@ -11,6 +11,8 @@
 	<applyafter name="xUI"/>
 
 	<copyfile name="ui/runeandstacktimer.package" source="ui/runeandstacktimer.package" />
+	<copyfile name="ui/runeandstacktimer_options.package" source="ui/runeandstacktimer_options.package" />
+
 
 	<!-- Apply the package -->
 	<editfile name="ui/game.interface">
