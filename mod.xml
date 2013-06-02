@@ -4,8 +4,8 @@
 	description="Warns the player a set amount of seconds before a rune will spawn and a set amount of seconds seconds before it's time to stack neutral creep camps."
 	author="Akai_Baraue, modified by MaPePeR"
 	weblink="https://github.com/MaPePeR/HoN-RuneAndStackTimer"
-	updatecheckurl="https://raw.github.com/MaPePeR/HoN-RuneAndStackTimer/release/version.txt"
-	updatedownloadurl="https://raw.github.com/MaPePeR/HoN-RuneAndStackTimer/release/HoN-RuneAndStackTimer.honmod"
+	updatecheckurl="https://github.com/MaPePeR/HoN-RuneAndStackTimer/raw/release/version.txt"
+	updatedownloadurl="https://github.com/MaPePeR/HoN-RuneAndStackTimer/raw/release/HoN-RuneAndStackTimer.honmod"
 	>
 
 	<applyafter name="xUI"/>
