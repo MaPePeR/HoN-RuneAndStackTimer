@@ -24,6 +24,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
 						Split(
 								set('runeandstacktimer_bothLastTime', Floor(param0/1000)),
+								if(runeandstacktimer_options_sound_enabled, PlaySound(runeandstacktimer_sound_id)),
 								LocalChat('' # runeandstacktimer_rune_colour # 'Rune^w and ' # runeandstacktimer_stack_colour # 'stack^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
 							)
 					);
@@ -35,6 +36,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_stack_time)) % 60 == 0 ),
 						Split(
 								set('runeandstacktimer_stackLastTime', Floor(param0/1000)),
+								if(runeandstacktimer_options_sound_enabled, PlaySound(runeandstacktimer_sound_id)),
 								LocalChat('' # runeandstacktimer_stack_colour # 'Stack^w in ' # runeandstacktimer_stack_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
 							)
 					);
@@ -46,6 +48,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
 							Split(
 								set('runeandstacktimer_runeLastTime', Floor(param0/1000)),
+								if(runeandstacktimer_options_sound_enabled, PlaySound(runeandstacktimer_sound_id)),
 								LocalChat('' # runeandstacktimer_rune_colour # 'Rune^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_rune_time) # '^w seconds')
 							)
 					);"
