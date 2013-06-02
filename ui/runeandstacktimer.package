@@ -1,0 +1,59 @@
+<package>
+	<panel
+		width="0h"
+		height="0h"
+
+		onload="
+				CreateInt('runeandstacktimer_bothLastTime', -1 );
+				CreateInt('runeandstacktimer_stackLastTime', -1 );
+				CreateInt('runeandstacktimer_runeLastTime', -1 );
+				CreateBool('runeandstacktimer_hasGameStarted', 0);"
+
+		watch0="MatchTime"
+		ontrigger0=" if( !runeandstacktimer_hasGameStarted
+						and ((Floor(param0/1000) == 0) or (Floor(param0/1000) > 100)),
+							set('runeandstacktimer_hasGameStarted', 1)
+							)
+					);
+					
+					if(	( runeandstacktimer_hasGameStarted )
+						and ( runeandstacktimer_options_stack_enabled )
+						and ( runeandstacktimer_options_rune_enabled )
+						and ( runeandstacktimer_bothLastTime != Floor(param0/1000) )
+						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_stack_time)) % 60 == 0 )
+						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
+						Split(
+								set('runeandstacktimer_bothLastTime', Floor(param0/1000)),
+								GameMessage('' # runeandstacktimer_rune_colour # 'Rune^w and ' # runeandstacktimer_stack_colour # 'stack^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
+							)
+					);
+
+					if(	( runeandstacktimer_hasGameStarted )
+						and ( runeandstacktimer_options_stack_enabled )
+						and ( runeandstacktimer_stackLastTime != Floor(param0/1000) )
+						and ( runeandstacktimer_bothLastTime != Floor(param0/1000) )
+						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_stack_time)) % 60 == 0 ),
+						Split(
+								set('runeandstacktimer_stackLastTime', Floor(param0/1000)),
+								GameMessage('' # runeandstacktimer_stack_colour # 'Stack^w in ' # runeandstacktimer_stack_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
+							)
+					);
+
+					if( ( runeandstacktimer_hasGameStarted )
+						and ( runeandstacktimer_options_rune_enabled )
+						and ( runeandstacktimer_runeLastTime != Floor(param0/1000) )
+						and ( runeandstacktimer_bothLastTime != Floor(param0/1000) )
+						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
+							Split(
+								set('runeandstacktimer_runeLastTime', Floor(param0/1000)),
+								GameMessage('' # runeandstacktimer_rune_colour # 'Rune^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_rune_time) # '^w seconds')
+							)
+					);"
+	/>
+	<instance
+		name="movf_frame"
+		id="runep"
+		textid="Rune And Stack Timer"
+		visible="true"
+		resizable="true" />
+</package>

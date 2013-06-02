@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification application="Heroes of Newerth" appversion="*" mmversion="1.0"
+	name="Rune and Stack Timer" version="1.1.1" date="2nd of May, 2012"
+	description="Warns the player a set amount of seconds before a rune will spawn and a set amount of seconds seconds before it's time to stack neutral creep camps."
+	author="Akai_Baraue"
+	weblink="http://honmods.com/index.php?r=mod/view/22"
+	updatecheckurl="http://www.honmods.com/?r=mod/version/22"
+	updatedownloadurl="http://www.honmods.com/?r=mod/download/22"
+	>
+
+	<applyafter name="xUI"/>
+
+	<copyfile name="ui/runeandstacktimer.package" source="ui/runeandstacktimer.package" />
+
+	<!-- Apply the package -->
+	<editfile name="ui/game.interface">
+		<find><![CDATA[</interface>]]></find>
+		<insert position="before">
+			<![CDATA[
+			<include file="runeandstacktimer.package" />
+			]]>
+		</insert>
+	</editfile>
+
+	<!-- Apply options -->
+    <editfile name="ui/mod_options_elements.package">
+		<find><![CDATA[<!-- INSERT AFTER THIS -->]]></find>
+		<insert position="after">
+            <![CDATA[
+		        <instance mod_id="runeandstacktimer_options" name="mod_options" mod_name="Rune and Stack Timer" />
+
+				<instance mod_id="runeandstacktimer_options" name="mod_checkbox" 
+					cvar="runeandstacktimer_options_stack_enabled" cvartype="int" default="1" 
+					label="Enable Stack Timer"/>
+				<instance mod_id="runeandstacktimer_options" name="mod_slider"  
+					maxlabel="30" minlabel="1" label="Seconds before neutral creeps spawn" 
+					cvar = "runeandstacktimer_options_display_stack_time" cvartype="int" default = "15" 
+					button_step="1" showpercent="0" maxvalue = "30" minvalue = "1" />
+
+				<instance name="mod_dropdown"  mod_id = "runeandstacktimer_options"  label="Notification Colour" cvar ="runeandstacktimer_stack_colour" cvartype="string" default="Yellow" />		
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^gGreen" value="^g" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^rRed" value="^r" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^bBlue" value="^b" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^cCyan" value="^c" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^yYellow" value="^y" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^oOrange" value="^o" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^pPurple" value="^p" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="^tTeal" value="^t" />
+				<instance  name="mod_empty"  mod_id = "runeandstacktimer_options"  />
+
+				<instance mod_id="runeandstacktimer_options" name="mod_checkbox" 
+					cvar="runeandstacktimer_options_rune_enabled" cvartype="int" default="1" 
+					label="Enable Rune Timer"/>
+				<instance mod_id="runeandstacktimer_options" name="mod_slider"  
+					maxlabel="30" minlabel="1" label="Seconds before rune spawns" 
+					cvar = "runeandstacktimer_options_display_rune_time" cvartype="int" default = "15" 
+					button_step="1" showpercent="0" maxvalue = "30" minvalue = "1" />
+
+				<instance name="mod_dropdown"  mod_id = "runeandstacktimer_options"  label="Notification Colour" cvar ="runeandstacktimer_rune_colour" cvartype="string" default="Blue" />		
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Green" value="^g" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Red" value="^r" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Blue" value="^b" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Cyan" value="^c" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Yellow" value="^y" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Orange" value="^o" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Purple" value="^p" />
+				<instance name="mod_dropdown_additem" mod_id = "runeandstacktimer_options" label="Teal" value="^t" />
+				<instance  name="mod_empty"  mod_id = "runeandstacktimer_options"  />
+            ]]>
+    	</insert>
+   	</editfile>
+</modification>
