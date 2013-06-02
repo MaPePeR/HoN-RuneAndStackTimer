@@ -1,3 +1,6 @@
+1.2.1:
+- Files are now placed in /ui/runeandstacktimer/.
+
 1.2.0:
 - Added different sounds for the timer messages.
 - Fixed for compability with HoN 3.1.2
