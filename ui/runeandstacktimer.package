@@ -9,8 +9,8 @@
 				CreateInt('runeandstacktimer_runeLastTime', -1 );
 				CreateBool('runeandstacktimer_hasGameStarted', 0);"
 
-		watch0="MatchTime"
-		ontrigger0=" if( !runeandstacktimer_hasGameStarted
+		watch="MatchTime"
+		ontrigger=" if( !runeandstacktimer_hasGameStarted
 						and ((Floor(param0/1000) == 0) or (Floor(param0/1000) > 100)),
 							set('runeandstacktimer_hasGameStarted', 1)
 							)
@@ -24,7 +24,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
 						Split(
 								set('runeandstacktimer_bothLastTime', Floor(param0/1000)),
-								GameMessage('' # runeandstacktimer_rune_colour # 'Rune^w and ' # runeandstacktimer_stack_colour # 'stack^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
+								LocalChat('' # runeandstacktimer_rune_colour # 'Rune^w and ' # runeandstacktimer_stack_colour # 'stack^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
 							)
 					);
 
@@ -35,7 +35,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_stack_time)) % 60 == 0 ),
 						Split(
 								set('runeandstacktimer_stackLastTime', Floor(param0/1000)),
-								GameMessage('' # runeandstacktimer_stack_colour # 'Stack^w in ' # runeandstacktimer_stack_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
+								LocalChat('' # runeandstacktimer_stack_colour # 'Stack^w in ' # runeandstacktimer_stack_colour # '' # Round(runeandstacktimer_options_display_stack_time) # '^w seconds')
 							)
 					);
 
@@ -46,7 +46,7 @@
 						and ( (Floor(param0/1000) + Round(runeandstacktimer_options_display_rune_time)) % 120 == 0 ),
 							Split(
 								set('runeandstacktimer_runeLastTime', Floor(param0/1000)),
-								GameMessage('' # runeandstacktimer_rune_colour # 'Rune^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_rune_time) # '^w seconds')
+								LocalChat('' # runeandstacktimer_rune_colour # 'Rune^w in ' # runeandstacktimer_rune_colour # '' # Round(runeandstacktimer_options_display_rune_time) # '^w seconds')
 							)
 					);"
 	/>

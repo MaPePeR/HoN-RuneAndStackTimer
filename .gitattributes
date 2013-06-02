@@ -1,6 +1,0 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-# Hon-Files
-*.package    diff=astextplain
-*.interface  diff=astextplain
