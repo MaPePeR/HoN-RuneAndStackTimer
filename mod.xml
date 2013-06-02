@@ -11,7 +11,7 @@
 	<applyafter name="xUI"/>
 
 	<copyfile name="/ui/runeandstacktimer/runeandstacktimer.package" source="/ui/runeandstacktimer/runeandstacktimer.package" />
-	<copyfile name="/ui/runeandstacktimer_options.package" source="/ui/runeandstacktimer/options.package" />
+	<copyfile name="/ui/runeandstacktimer/options.package" source="/ui/runeandstacktimer/options.package" />
 
 
 	<!-- Apply the package -->
