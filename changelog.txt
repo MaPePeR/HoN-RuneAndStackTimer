@@ -1,3 +1,7 @@
+2.0
+- Updated for HoN 4.0.
+- Fixed bug in the coloring of the mod options.
+
 1.2.5
 - Finally a working update.
 
@@ -7,7 +11,7 @@
 1.2.3
 - Only for testing the update.
 
-1.2.2: 
+1.2.2:
 - Updating is now done with the GitHub release-Branch.
 
 1.2.1:
