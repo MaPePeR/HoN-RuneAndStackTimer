@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modification application="Heroes of Newerth" appversion="*" mmversion="*"
-	name="Rune and Stack Timer" version="2.1" date="1/3/2018"
+	name="Rune and Stack Timer" version="2.2" date="1/21/2018"
 	description="Warns the player a set amount of seconds before a rune will spawn and a set amount of seconds seconds before it's time to stack neutral creep camps."
 	author="Akai_Baraue, modified by MaPePeR. Updated for HoN 4.0 by MrHappyAsthma."
 	weblink="https://github.com/mrhappyasthma/HoN-RuneAndStackTimer"
@@ -37,16 +37,6 @@
 
   <!-- Sentinel UI -->
 	<editfile name="ui/game_garena_other.interface">
-		<find><![CDATA[</interface>]]></find>
-		<insert position="before">
-			<![CDATA[
-			<include file="/ui/runeandstacktimer/runeandstacktimer.package" />
-			]]>
-		</insert>
-	</editfile>
-
-  <!-- 8-Bit UI -->
-	<editfile name="ui/game_retro.interface">
 		<find><![CDATA[</interface>]]></find>
 		<insert position="before">
 			<![CDATA[
