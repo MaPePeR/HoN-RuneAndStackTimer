@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<modification application="Heroes of Newerth" appversion="*" mmversion="1.0"
-	name="Rune and Stack Timer" version="1.2.5" date="2013-06-02"
+<modification application="Heroes of Newerth" appversion="*" mmversion="*"
+	name="Rune and Stack Timer" version="2.2" date="1/21/2018"
 	description="Warns the player a set amount of seconds before a rune will spawn and a set amount of seconds seconds before it's time to stack neutral creep camps."
-	author="Akai_Baraue, modified by MaPePeR"
-	weblink="https://github.com/MaPePeR/HoN-RuneAndStackTimer"
-	updatecheckurl="https://github.com/MaPePeR/HoN-RuneAndStackTimer/raw/release/version.txt"
-	updatedownloadurl="https://github.com/MaPePeR/HoN-RuneAndStackTimer/raw/release/HoN-RuneAndStackTimer.honmod"
+	author="Akai_Baraue, modified by MaPePeR. Updated for HoN 4.0 by MrHappyAsthma."
+	weblink="https://github.com/mrhappyasthma/HoN-RuneAndStackTimer"
+	updatecheckurl="https://raw.githubusercontent.com/mrhappyasthma/HoN-RuneAndStackTimer/master/version.txt"
+	updatedownloadurl="https://github.com/mrhappyasthma/HoN-RuneAndStackTimer/releases/download/Latest/HoN-RuneAndStackTimer.honmod"
 	>
 
 	<applyafter name="xUI"/>
@@ -15,7 +15,28 @@
 
 
 	<!-- Apply the package -->
-	<editfile name="ui/game.interface">
+  <!-- Classic UI -->
+	<editfile name="ui/game_legacy.interface">
+		<find><![CDATA[</interface>]]></find>
+		<insert position="before">
+			<![CDATA[
+			<include file="/ui/runeandstacktimer/runeandstacktimer.package" />
+			]]>
+		</insert>
+	</editfile>
+
+  <!-- Razor UI -->
+	<editfile name="ui/game_apex.interface">
+		<find><![CDATA[</interface>]]></find>
+		<insert position="before">
+			<![CDATA[
+			<include file="/ui/runeandstacktimer/runeandstacktimer.package" />
+			]]>
+		</insert>
+	</editfile>
+
+  <!-- Sentinel UI -->
+	<editfile name="ui/game_garena_other.interface">
 		<find><![CDATA[</interface>]]></find>
 		<insert position="before">
 			<![CDATA[
