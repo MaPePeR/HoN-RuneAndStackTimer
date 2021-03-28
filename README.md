@@ -14,7 +14,7 @@ You can customize the sound effect, color, and timer-offset of the alerts in the
 Based on a [Mod by Akai_baraue](http://honmods.com/index.php?r=mod/view/22-rune-and-stack-timer).
 
 ## Installing
-0. You will need the [HoN Mod Manager](https://forums.heroesofnewerth.com/showthread.php?596451-HoN-Modification-Manager-1-4-0&p=16563263&viewfull=1#post16563263) to use this mod. So first, install that.
+0. You will need the [HoN Mod Manager](https://forums.heroesofnewerth.com/index.php?/topic/112-hon-mod-manager-download/) to use this mod. So first, install that.
 
 1. Once that is installed, you can download the latest release of the `Rune and Stack Timer` mod from [here](https://github.com/mrhappyasthma/HoN-RuneAndStackTimer/releases/download/Latest/HoN-RuneAndStackTimer.honmod).
 
